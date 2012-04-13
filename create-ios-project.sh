@@ -45,6 +45,17 @@ function cleanUp {
 PHONEGAP_TEMPLATE_PATH="$HOME/Library/Application Support/Developer/Shared/Xcode/Project Templates/Cordova/Cordova-based Application/"
 
 # ##############################################
+# HELP OPTION
+# ##############################################
+
+if [ $1 == "-h" ] || [ $1 == "--help" ]; then
+	echo "Usage: ./create_project.sh <PROJECT_NAME> <PATH_TO_PUT_NEW_PROJECT>"
+	echo "<PROJECT_NAME> - the name of the project (cannot have spaces in it)"
+	echo "<PATH_TO_PUT_NEW_PROJECT> - the path to put the new project folder in"
+	exit 1
+fi
+
+# ##############################################
 # SCRIPT ARGUMENTS
 # ##############################################
 
